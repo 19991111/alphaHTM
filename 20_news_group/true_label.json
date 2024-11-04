@@ -1,0 +1,13 @@
+{
+    "sci":"science",
+    "rec":"recreation",
+    "comp":"computer",
+    "soc":"society",
+    "alt":"alternative",
+    "x":"unix",
+    "sys":"system",
+    "os":"operation system",
+    "misc":"miscellaneous",
+    "crypt":"cryptographic",
+    "med":"medical"
+}
