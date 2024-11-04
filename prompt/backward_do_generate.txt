@@ -1,0 +1,52 @@
+You will receive a document and hierarchical topics based on that document,arranged in order . Your task is to summarize the topics of the previous layer based on the hierarchical topics and document. If you cannot summarize, return the value <eog>.
+
+[Hierarchical topics]
+{Topics}
+
+[Examples]
+Example 1: Adding "Trade"
+
+Hierarchical topics:
+Duty suspension,Tariff Policy
+
+Document: 
+Amends the Harmonized Tariff Schedule of the United States to suspend temporarily the duty on mixtures containing Fluopyram.
+
+Your response:
+{{
+    "topic":"Trade"
+}}
+
+Example 2: returning <eog>
+Hierarchical topics:
+christian,religion,society
+
+Document: 
+Please note that God commanded Adam to work before the fall:""The LORD God took the man and put him in the Garden of Eden to work, it and take care of it."" (Gen 2:15, NIV).Work was God's design from the beginning.
+
+Your response:
+{{
+    "topic":"<eog>"
+}}
+
+[Instructions]
+Step 1: Determine topics mentioned in the document. 
+- The topic labels must be as GENERALIZABLE. They must not be document-specific.
+- The topics must reflect a SINGLE topic instead of a combination of topics.
+- The new topics only have a short general label. 
+
+Step 2: Perform the following operations:  
+- If the document contains no topic, return "None". 
+- There must be only a short general label in your response.
+
+[Document]
+{Document}
+
+[Notice]
+- A document can only have one topic. If it corresponds to multiple topics, please output the most relevant one.
+- Please only return data in JSON format.
+- The generated topics must not duplicate the topics in Hierarchical topics.
+
+[Your response]
+
+
